@@ -21,6 +21,8 @@ class AVLIterativo:
             node.left = node_new
         else:
             node.right = node_new
+    def search(self ,key):
+        return self.tree_search(self.root,key)
     def tree_search(self,root,k):
         node=root        
         while not node is None and k != node.x:
@@ -88,3 +90,5 @@ avl.insert_public(node)
 node = Node(3)
 avl.insert_public(node)
 avl.inorden()
+
+print(avl.search(5).x)
